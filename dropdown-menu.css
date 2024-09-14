@@ -1,0 +1,133 @@
+.dd_content_con {
+    position: absolute;
+	height: 0;
+	width: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.dd_content {
+    background: #F0F0F0;
+    padding: 40px 0;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.dd_tabs {
+    display: flex;
+    gap: 20px 70px;
+}
+
+.dd_tabs_nav {
+    width: 228px;
+    flex-shrink: 0;
+    border-right: 1px solid #cacaca;
+    border-top: 1px solid #cacaca;
+}
+.dd_tab_nav {
+    font-family: 'Exo', sans-serif;
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 1;
+	text-transform: uppercase;
+	min-height: 76px;
+	display: flex;
+	align-items: center;
+	padding: 10px 10px 10px 50px;
+
+    cursor: pointer;
+    position: relative;
+    transition: background .2s ease, color .2s ease;
+    border-bottom: 1px solid #cacaca;
+}
+.dd_tab_nav:hover {
+    color: #ff0000;
+}
+.dd_tab_nav.active {
+    background: #ebebeb;
+    color: #ff0000;
+}
+.dd_tab_nav.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background-color: #FF0000;
+    background: linear-gradient(180deg, #FF0000, #800000);
+}
+
+.dd_tabs_contents {
+    flex: 1;
+}
+
+.dd_content_groups {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 40px 45px;
+    padding: 24px 0;
+}
+
+.dd_link_style_1 {
+    font-family: 'Exo', sans-serif;
+	font-size: 20px;
+	font-weight: 900;
+	line-height: 1;
+	text-transform: uppercase;
+    color: #FF0000;
+
+    display: flex;
+    gap: 15px;
+}
+.dd_link_style_1:after {
+    content: "\e90d";
+	font-family: 'icomoon';
+    font-weight: 400;
+    margin-top: -3px;
+    transition: transform .3s ease;
+}
+.dd_link_style_1:hover:after {
+    transform: translateX(3px);
+}
+
+.dd_content_group .image {
+    margin-bottom: 20px;
+}
+.dd_content_group .parent_link {
+    margin-bottom: 12px;
+}
+.dd_content_group .links {
+    display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+    gap: 5px;
+}
+.dd_content_group .links a:hover {
+    text-decoration: underline;
+}
+
+.dd_content_style_1 .heading {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+	font-size: 22px;
+	font-weight: 700;
+	text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.dd_content_style_1 .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(274px, 1fr));
+    gap: 50px;
+}
+.dd_content_style_1 .image {
+    aspect-ratio: auto 592 / 336;
+    line-height: 0;
+    background: #dddddd;
+    margin-bottom: 20px;
+}
+.dd_content_style_1 .item .link {
+    font-size: 20px;
+    font-weight: 900;
+	text-transform: uppercase;
+}
